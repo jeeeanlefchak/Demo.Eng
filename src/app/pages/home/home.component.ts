@@ -1,5 +1,7 @@
 import { Component, NgModule, OnInit } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CardModule } from 'primeng/card';
+import { CarouselModule } from 'primeng/carousel';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +9,15 @@ import { RouterModule, Routes } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  products?: any = undefined ?? [];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.products = [];
+    this.products?.push({ code: '0', description: 'Casa 01', name: 'Casa 4 x 4', image: '../../assets/casa.jpg' })
+    this.products?.push({ code: '1', description: 'Casa 02', name: 'Casa 4 x 4', image: '../../assets/casa.jpg' })
+    this.products?.push({ code: '2', description: 'Casa 03', name: 'Casa 4 x 4', image: '../../assets/casa.jpg' })
   }
 
 }
@@ -28,7 +35,9 @@ export class HomeRoutingModule { }
 
 @NgModule({
   imports: [
-    HomeRoutingModule
+    HomeRoutingModule,
+    CarouselModule,
+    CardModule
   ],
   exports: [
     HomeComponent

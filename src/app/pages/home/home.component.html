@@ -1,1 +1,31 @@
-<p>home works!</p>
+<p-card>
+  <ng-template pTemplate="header">
+    Header content here
+  </ng-template>
+
+  <p-carousel [value]="products" [circular]="true">
+    <ng-template pTemplate="header">
+      <h5>Exemplos de casa</h5>
+    </ng-template>
+    <ng-template let-data pTemplate="item">
+      <div class="center-items">
+        <img [src]="data?.image" alt="" width="250px" height="180px">
+      </div>
+    </ng-template>
+  </p-carousel>
+  <p-carousel [value]="products" [circular]="true">
+    <ng-template pTemplate="header">
+      <h5>Exemplos de casa</h5>
+    </ng-template>
+    <ng-template let-data pTemplate="item">
+      <div class="center-items">
+        <img [src]="data?.image" alt="" width="250px" height="180px">
+      </div>
+    </ng-template>
+  </p-carousel>
+
+  <ng-template pTemplate="footer">
+    Footer content here
+  </ng-template>
+
+</p-card>
