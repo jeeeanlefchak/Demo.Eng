@@ -1,6 +1,10 @@
 .menu-is-opened {
   width: 0rem !important;
   transform: translate(-100%);
+
+  app-menu {
+    display: none;
+  }
 }
 
 .layout-sidebar {

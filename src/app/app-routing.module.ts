@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'site',
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.component').then(m => m.HomeModule)
+    path: 'site',
+    loadChildren: () => import('./pages/panel/panel.module').then(m => m.PanelModule)
   },
 ];
 
