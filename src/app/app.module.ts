@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SidebarModule } from './components/sidebar/sidebar.component';
 import { ToolbarModule } from './components/toolbar/toolbar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ToolbarModule
+    ToolbarModule,
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

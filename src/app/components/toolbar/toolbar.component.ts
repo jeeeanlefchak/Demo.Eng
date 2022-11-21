@@ -1,8 +1,8 @@
-import { Component, NgModule, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { ToolbarModule as ToolbarModulePNG } from 'primeng/toolbar';
+import { Component, NgModule, OnInit, ViewEncapsulation } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
-import { MenuItem } from 'primeng/api';
-import { Menu, MenuModule } from 'primeng/menu';
+import { MenuModule } from 'primeng/menu';
+import { ToolbarModule as ToolbarModulePNG } from 'primeng/toolbar';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -11,35 +11,17 @@ import { Menu, MenuModule } from 'primeng/menu';
   encapsulation: ViewEncapsulation.None
 })
 export class ToolbarComponent implements OnInit {
-  @ViewChild('menu', { static: false }) menu?: Menu;
-
-  items: MenuItem[] = [];
-
-  constructor() { }
+  constructor(public sharedService: SharedService) { }
 
   ngOnInit(): void {
-    this.items = [{
-      label: 'File',
-      items: [
-        { label: 'New', icon: 'pi pi-plus' },
-        { label: 'Open', icon: 'pi pi-download' }
-      ]
-    },
-    {
-      label: 'Edit',
-      items: [
-        { label: 'Undo', icon: 'pi pi-refresh' },
-        { label: 'Redo', icon: 'pi pi-repeat' }
-      ]
-    }];
+
   }
 
   showMenu(args: any) {
-    this.menu?.toggle(args);
+    this.sharedService.showMenu = !this.sharedService.showMenu;
   }
 
 }
-
 
 @NgModule({
   imports: [

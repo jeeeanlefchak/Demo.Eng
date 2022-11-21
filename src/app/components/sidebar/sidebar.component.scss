@@ -1,0 +1,26 @@
+.menu-is-opened {
+  width: 0rem !important;
+  transform: translate(-100%);
+}
+
+.layout-sidebar {
+  position: fixed;
+  width: 14rem;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 5rem);
+  left: 0;
+  top: 5rem;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: var(--v-body-bg);
+  z-index: 999;
+  transition: transform 0.5s;
+
+  .layout-menu-container {
+    overflow: auto;
+    flex: 1;
+    height: 100%;
+    padding: 1rem 1.5rem;
+  }
+}

@@ -1,3 +1,13 @@
+:root {
+  --v-body-bg: #41549b;
+  color: white;
+}
+
+body {
+  background-color: var(--v-body-bg);
+  font-family: 'Muli';
+}
+
 .center-items {
   align-items: center;
   justify-content: center;

@@ -10,7 +10,7 @@ app-toolbar {
     z-index: 1000;
     display: flex;
     align-items: center;
-    background-color: #ffffff;
+    background-color: var(--v-body-bg);
 
     .app-logo {
       display: flex;
@@ -18,7 +18,7 @@ app-toolbar {
       .logo {
         width: 50px;
         height: 45px;
-        background-color: black;
+        background-color: white;
         border-radius: 5px;
       }
 
@@ -26,7 +26,7 @@ app-toolbar {
         font-size: 2rem;
         font-weight: 700;
         margin-left: 0.5rem;
-        color: #495057;
+        color: white;
       }
     }
 
@@ -48,7 +48,7 @@ app-toolbar {
         border-radius: 7px;
         transition-duration: .5s;
         transition-timing-function: swing;
-        background-color: #6c757d;
+        background-color: white;
       }
 
       span:before {
@@ -61,7 +61,7 @@ app-toolbar {
         border-radius: 7px;
         transition-duration: .5s;
         transition-timing-function: swing;
-        background-color: #6c757d;
+        background-color: white;
       }
 
       span:after {
@@ -74,7 +74,7 @@ app-toolbar {
         border-radius: 7px;
         transition-duration: .5s;
         transition-timing-function: swing;
-        background-color: #6c757d;
+        background-color: white;
       }
     }
 
